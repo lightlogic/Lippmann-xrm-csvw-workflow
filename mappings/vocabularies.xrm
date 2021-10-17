@@ -1,0 +1,73 @@
+vocabulary cidoccrm {
+
+	prefix "ccrm" "http://www.cidoc-crm.org/cidoc-crm/"
+
+	classes
+        E3_condition_state
+		E14_Condition_Assessment
+        E24_Physical_Human_Made_Thing "E24_Physical_Human-Made_Thing"
+        E35_Title
+        E36_Visual_Item
+        E42_Identifier
+        E54_Dimension
+        E55_Type
+    
+    properties
+        P1_is_identified_by
+        P2_has_type
+        P102_has_title
+        P34_concerned
+        P35_has_identified
+        P43_has_dimension
+        P45_consists_of
+        P46_is_composed_of
+        P55_has_current_location
+        E57 _Material
+        P65_shows_visual_item
+        P94_has_created
+        P138_represents
+}
+
+vocabulary schema {
+    prefix "schema" "https://schema.org"
+
+    classes
+        Name
+        Organisation
+        Person
+        PostalAddress
+        QuantitativeValue
+
+    properties
+        addressLocality
+        addressCountry
+        contactPoint
+        employee
+        hasOccupation
+        location
+        name
+        description
+        postalCode
+        streetAddress
+        unitCode
+        value
+        depth
+        height
+        width
+}
+
+// used for classes and properties we do not know where to map yet
+vocabulary ex {
+    prefix "ex" "http://www.example.com/"
+	classes
+		Image_Orientation
+	properties
+		is_oriented
+}
+
+vocabulary rdfs {
+    prefix "rdfs" "http://www.w3.org/2000/01/rdf-schema#"
+
+    properties
+        seeAlso
+}

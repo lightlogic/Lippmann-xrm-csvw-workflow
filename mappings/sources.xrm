@@ -1,0 +1,125 @@
+dialect Comma {
+    delimiter ","
+    quoteChar '\\"'
+}
+
+logical-source catalogueRaisonne {
+    type csv
+    source "../input/catRais_artwork_data.csv"
+    dialect Comma
+
+    referenceables
+        artwork_thing
+        artwork_plate
+        artwork_prism
+        artwork_image
+        artwork_seal
+        condition_assessment_thing
+        condition_assessment_plate
+        condition_assessment_prism
+        condition_assessment_image
+        condition_assessment_seal
+        country
+        city
+        institution_name
+        institution_location
+        inst_street
+        inst_zip
+        inst_city
+        institution_contact
+        inst_contact_name
+        inst_contact_function
+        num_inv
+        creator
+        title
+        title_original
+        title_assigned
+        artwork_dimensions
+        depicted_content
+        image_visual
+        image_dimension
+        image_height
+        image_width
+        image_depth
+        image_orientation
+        seal_material
+        seal_condition
+        prism_caracteristics
+        prism_rearFace
+}
+
+logical-source titles {
+    type csv
+    source "./input_data/titles.csv"
+    dialect Comma
+
+    referenceables
+    title_identifier
+    title_name
+    title_type
+}
+
+logical-source images {
+    type csv
+    source "./input_data/visualContent.csv"
+    dialect Comma
+
+    referenceables
+    visual_identifier
+    depicted_content
+    image_dimensions
+    image_orientation
+}
+
+
+
+logical-source dimensions {
+    type csv
+    source "./input_data/dimensions.csv"
+    dialect Comma
+
+    referenceables
+    dimension_identifier
+    dimension_description
+    dimension_unit
+    height
+    width
+    depth
+}
+
+
+logical-source persons {
+    type csv
+    source "../input/catRais_persons.csv"
+    dialect Comma
+
+    referenceables
+        person_id
+        institution_contact
+        pers_name
+        inst_contact_function
+}
+
+logical-source organisations {
+    type csv
+    source "./input_data/organisations.csv"
+    dialect Comma
+
+    referenceables
+        institution_identifier
+        institution_name
+        institution_location
+}
+
+logical-source postalAddresses {
+    type csv
+    source "./input_data/postalAddresses.csv"
+    dialect Comma
+
+    referenceables
+        postalAddress_identifier
+        inst_street
+        inst_zip
+        inst_city
+        country
+}

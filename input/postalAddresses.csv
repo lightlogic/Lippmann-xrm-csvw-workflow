@@ -1,0 +1,5 @@
+﻿post_1;post_2;post_3;post_4;post_5
+;source: wikidata;source: wikidata;source: wikidata;source: wikidata
+postalAddress_identifier;inst_street;inst_zip;inst_city;country
+Identifiant de l'adresse postale de l'institution;Adresse institution;Code postal institution;Ville institution;Pays
+http://example.org/postalAddress/0;Avenue de l'Elysée 18;1014;Lausanne;Suisse
